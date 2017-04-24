@@ -83,7 +83,7 @@ public class RootController implements Initializable {
         data4.add(new XYChart.Data("2017", 22));
         data4.add(new XYChart.Data("2018", 15));
         series3.setData(data4);   //시리즈에 데이터 넣어주고
-        AreaChart.getData().add(series3);   //  Area차트에 시리즈넣어주고
+       //AreaChart.getData().add(series3);   //  Area차트에 시리즈넣어주고
         
         XYChart.Series<String, Integer> series4 = new XYChart.Series<>();
         series4.setName("평균속도");
@@ -93,7 +93,7 @@ public class RootController implements Initializable {
         data5.add(new XYChart.Data("2017", 44));
         data5.add(new XYChart.Data("2018", 55));
         series4.setData(data5);   //시리즈에 데이터 넣어주고
-        AreaChart.getData().add(series4);   // Area차트에 시리즈넣어주고
+       // AreaChart.getData().add(series4);   // Area차트에 시리즈넣어주고
     }    
     
 }
