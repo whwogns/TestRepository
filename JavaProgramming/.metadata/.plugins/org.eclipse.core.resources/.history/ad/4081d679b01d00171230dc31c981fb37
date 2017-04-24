@@ -1,0 +1,5 @@
+package ch14.assignment.exam02;
+
+public interface MyFunctionalInterface {
+
+}

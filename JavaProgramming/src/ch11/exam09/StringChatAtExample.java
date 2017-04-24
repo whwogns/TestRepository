@@ -1,0 +1,22 @@
+package ch11.exam09;
+
+public class StringChatAtExample {
+
+	public static void main(String[] args) {
+		String ssn = "010624-1230123";
+		char sex =ssn.charAt(7);
+		switch(sex){
+		case '1':
+		
+		case '3':
+			System.out.println("남자입니다.");
+			break;    //브레이크까지 실행시키고 스위치빠져나감
+			
+		case '2':
+		case '4':
+			System.out.println("여자입니다.");
+			break;
+		}
+	}
+
+}

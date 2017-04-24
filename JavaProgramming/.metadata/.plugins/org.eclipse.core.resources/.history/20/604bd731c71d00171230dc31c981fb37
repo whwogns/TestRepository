@@ -1,0 +1,10 @@
+package ch14.exam07;
+
+public class LambdaExpressionExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

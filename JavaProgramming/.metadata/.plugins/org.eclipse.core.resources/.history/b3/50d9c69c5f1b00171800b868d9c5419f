@@ -1,0 +1,9 @@
+package ch12.exam09;
+
+public class WriteThread extends Thread {
+	
+	//Field
+	//Constructor
+	//Method
+
+}

@@ -1,0 +1,38 @@
+package ch14.exam07;
+
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
+public class LambdaExpressionExample {
+
+	public static void main(String[] args) {
+		method1(new Consumer<String>(){
+			@Override
+			public void accept(String t) {
+				
+					System.out.println(t);
+				
+			}
+		});
+		
+		method1((s)->{
+		
+				System.out.println("°ú¸ñ"+s);
+			
+		});
+		
+		
+		method2((s1,s2)->{
+			System.out.println(s1+"-"+s2);
+
+		});
+
+	}
+	public static void method1(Consumer<String>arg){
+		arg.accept("Java");
+	}
+	
+	public static void method2(BiConsumer<String, String>arg){
+		arg.accept("IoT","Java");
+	}
+}

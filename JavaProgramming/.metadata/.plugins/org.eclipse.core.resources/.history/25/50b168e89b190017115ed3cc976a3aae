@@ -1,0 +1,10 @@
+package ch11.exam10;
+
+public class StringTokenizerExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

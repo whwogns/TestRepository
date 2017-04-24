@@ -1,0 +1,16 @@
+package ch14.exam02;
+
+public class LambdaExpressionExample {
+
+	public static void main(String[] args) {
+		method1(() ->{
+			
+			System.out.println("run..");
+		});
+	}
+	
+	public static void method1(FunctionalInterface1 i) {
+		i.method();
+	}
+
+}

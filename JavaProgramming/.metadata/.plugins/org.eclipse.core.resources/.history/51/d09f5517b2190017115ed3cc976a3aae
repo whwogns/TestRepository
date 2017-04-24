@@ -1,0 +1,25 @@
+package ch11.exam13;
+
+public class Member implements Comparable<Member> {     //<>의미는 member끼리 비교하란뜻.
+ 	private String name;
+ 	private int age;
+	
+	public Member(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return name;
+	}
+
+	@Override
+	public int compareTo(Member o) {
+		return name.compareTo(o.name);//기준객체가 앞에있으면 음수 비교객체보다 뒤에 위치하면 양수.를 리턴하도록 재정의한것.
+	}
+		
+}
+
+

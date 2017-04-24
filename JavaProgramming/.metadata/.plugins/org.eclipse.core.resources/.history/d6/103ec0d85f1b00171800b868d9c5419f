@@ -1,0 +1,12 @@
+package ch12.exam09;
+
+public class ReadThread extends Thread {
+	
+	//Field
+	//Constructor
+	public ReadThread(DataBox databox){
+		this.dataBox = dataBox;
+	}
+	//Method
+
+}

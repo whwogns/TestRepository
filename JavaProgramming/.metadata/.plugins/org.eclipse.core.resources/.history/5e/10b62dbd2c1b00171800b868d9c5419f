@@ -1,0 +1,14 @@
+package ch12.exam01;
+
+import java.awt.Toolkit;
+
+public class BeepPrintExample {
+
+	public static void main(String[] args) {
+		//소리를 내는 코드
+		Toolkit toolkit = Toolkit.getDefaultToolkit();//스태틱이라 뉴를 이용해도 되지만 객체없이도 접근가능 또
+		toolkit.beep();
+
+	}
+
+}
