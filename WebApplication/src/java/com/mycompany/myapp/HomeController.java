@@ -41,6 +41,25 @@ public class HomeController {
 	public String javascripExam03(){
 		return "javascript/exam03";
 	}
+	@RequestMapping("/javascript/exam04")
+	public String javascripExam04(){
+		return "javascript/exam04";
+	}
+	
+	@RequestMapping("/javascript/exam05")
+	public String javascripExam05(){
+		return "javascript/exam05";
+	}
+	
+	@RequestMapping("/javascript/exam06")
+	public String javascripExam06(){
+		return "javascript/exam06";
+	}
+	
+	@RequestMapping("/javascript/exam07")
+	public String javascripExam07(){
+		return "javascript/exam07";               //dispatch servlet에서 경로 앞뒤를 이미 설정해놓았기에 이를 생략한 경로만 작성해도 됨.
+	}
 	
 	@RequestMapping("/bootstrap/exam01")
 	public String bootstrapExam01(){
