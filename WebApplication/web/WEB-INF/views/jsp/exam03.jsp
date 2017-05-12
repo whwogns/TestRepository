@@ -34,5 +34,7 @@ jsp에서의 주석임. 결과에 영향없다.
 		<c:forEach begin="1" end="5" step="1" varStatus="status">
 			<img src="/WebApplication/resources/image/member0${status.count}.png" width="50px" height="50px"/>
 		</c:forEach>
+		
+		
     </body>
 </html>

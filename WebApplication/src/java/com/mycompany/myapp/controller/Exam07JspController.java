@@ -18,6 +18,7 @@ public class Exam07JspController {
 	public String exam01() {
 		return "jsp/exam01";
 	}
+	
 
 	@RequestMapping("/exam02")
 	public String exam02() {
@@ -45,29 +46,28 @@ public class Exam07JspController {
 	@RequestMapping("/exam05")
 	public String exam05(Model model) {
 		model.addAttribute("name3", "홍길동");     //model이면 add~~   // add~~이면 '여러개' 추가                     // 위처럼 쓰지 않고 model을 쓰는게 보통임.
-		model.addAttribute("member3",new Member("홍길동",30));
-		
-		Board board =new Board();
+		model.addAttribute("member3", new Member("홍길동", 30));
+
+		Board board = new Board();
 		board.setBno(1);
 		board.setBtitle("오늘은 과제");
 		board.setBcontent("과제할 내용 준비");
 		board.setBwriter("감자바");
 		board.setBdate(new Date());
 		model.addAttribute("board", board);
-		
-		
-		List<Board> list = new ArrayList <Board>();
-		for(int i=1;i<=10;i++){
-		Board b = new Board();
-		b.setBno(i);
-		b.setBtitle("제목"+i);
-		b.setBcontent("내용이다"+i);
-		b.setBwriter("글쓴이"+i);
-		b.setBdate(new Date());
-		list.add(b);
+
+		List<Board> list = new ArrayList<Board>();
+		for (int i = 1; i <= 10; i++) {
+			Board b = new Board();
+			b.setBno(i);
+			b.setBtitle("제목" + i);
+			b.setBcontent("내용이다" + i);
+			b.setBwriter("글쓴이" + i);
+			b.setBdate(new Date());
+			list.add(b);
 		}
 		model.addAttribute("list", list);
-		
+
 		return "jsp/exam05";
 	}
 }

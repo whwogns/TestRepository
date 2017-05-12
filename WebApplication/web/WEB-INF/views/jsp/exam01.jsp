@@ -10,7 +10,7 @@ jsp에서의 주석임. 결과에 영향없다.
 3. 역할
 ---%>
 <%@page import="java.util.*, java.io.*"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page contentType="text/html;charset=UTF-8"%>
 
 
 <!DOCTYPE html>
@@ -27,6 +27,7 @@ jsp에서의 주석임. 결과에 영향없다.
         <h1>java.util.Calendar</h1>
 		<%
 			Calendar now = Calendar.getInstance();
+			
 			int year = now.get(Calendar.YEAR);
 			int month = now.get(Calendar.MONTH)+1;
 			int date = now.get(Calendar.DAY_OF_MONTH);

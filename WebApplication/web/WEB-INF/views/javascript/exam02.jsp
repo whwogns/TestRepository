@@ -10,13 +10,13 @@
 					to = from;
 					from=0;
 				}
-				/*var sum = 0;
+				var sum = 0;
 				for(var i=from; i<=to; i++){
 					sum+=i;
 				}
 				return sum;
 			}
-			*/
+			
 			var return = totalSum(1,100);    // 자바스크립트는 매개변수 수만큼 꼭 대입할 필요없다. 두개라도 하나만 넣어도 됨.
 			console.log("result: "+result);
 			
