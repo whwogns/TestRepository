@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="TestRepository">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JavaFxApplication/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JavaIoProgramming/JavaHomework1/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JavaIoProgramming/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JavaIoProgramming2/src/newpackage"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/JavaProgramming/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/NetBeansProjects/JavaApplicationHome/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/RPi-LCD-JavaFXProgramming/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/RPi-LCD-JavaProgramming/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebApplication/build/generated/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebApplication/src/java"/>
+        <property name="context-root" value="TestRepository"/>
+        <property name="java-output-path" value="/TestRepository/JavaFxApplication/build/classes"/>
+    </wb-module>
+</project-modules>
