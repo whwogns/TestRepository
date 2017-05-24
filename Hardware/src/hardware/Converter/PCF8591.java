@@ -3,8 +3,6 @@ package hardware.Converter;
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class PCF8591 {
 	public static final int AIN0=0x40;

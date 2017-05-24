@@ -2,6 +2,10 @@ package com.mycompany.myapp.controller;
 
 import com.mycompany.myapp.service.Exam10Service1;
 import com.mycompany.myapp.service.Exam10Service2;
+import com.mycompany.myapp.service.Exam10Service3;
+import com.mycompany.myapp.service.Exam10Service4;
+import com.mycompany.myapp.service.Exam10Service5;
+import com.mycompany.myapp.service.Exam10Service6;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,13 +17,15 @@ public class Exam10DIController {
 	@Autowired
 	private Exam10Service1 exam10Service1;
 	@Autowired
-	private Exam10Service1 exam10Service2;
+	private Exam10Service2 exam10Service2;
 	@Autowired
-	private Exam10Service1 exam10Service3;
+	private Exam10Service3 exam10Service3;
 	@Autowired
-	private Exam10Service1 exam10Service4;
+	private Exam10Service4 exam10Service4;
 	@Autowired
-	private Exam10Service1 exam10Service5;
+	private Exam10Service5 exam10Service5;
+	@Autowired
+	private Exam10Service6 exam10Service6;
 	
 //	//DI 주입 HOW2 -(세터주입) 주입을 하고 이에 더해 초기화 코드를 더 넣어줄수 있다.
 //	private Exam10Service2 exam10Service2;
@@ -40,6 +46,7 @@ public class Exam10DIController {
 		exam10Service3.join();
 		exam10Service4.join();
 		exam10Service5.join();
+		exam10Service6.join();
 		return "di/exam01";
 	}
 	
@@ -51,7 +58,8 @@ public class Exam10DIController {
 		exam10Service3.login();
 		exam10Service4.login();
 		exam10Service5.login();
-		return "di/exam01";
+		exam10Service6.login();
+		return "di/exam02";
 	}
 	
 	

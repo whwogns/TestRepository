@@ -81,10 +81,14 @@
 		
 		<h4>파일 다운로드</h4>
 		<a href="file/exam03" class="btn btn-primary">파일로 저장</a>
-		<img src="file/exam03" width="100px" heigt="100px"/>
+		<img src="file/exam03" width="100px" height="100px"/>
 		
 		<h4>의존성주입</h4>
 		<a href="di/exam01" class="btn btn-primary">회원가입</a>
 		<a href="di/exam02" class="btn btn-primary">로그인</a>
+		
+		<h4>리다이렉트(재요청)</h4>
+		<a href="redirect/list" class="btn btn-primary">게시물목록</a>
+		<a href="redirect/write" class="btn btn-primary">게시물쓰기</a>
 	</body>
 </html>

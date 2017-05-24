@@ -12,7 +12,6 @@ public class Exam01HomeController {
 	@RequestMapping("/")
 	public String home(){
 		LOGGER.info("/요청처리함");
-		System.out.println("home()");
 		return "home";
 	}
 
