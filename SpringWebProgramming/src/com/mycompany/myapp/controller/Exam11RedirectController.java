@@ -12,7 +12,8 @@ public class Exam11RedirectController {
 	@RequestMapping("/redirect/write")
 	public String write(){
 		LOGGER.info("게시물저장");
-		return "redirect:/redirect/list";  //클라이언트가 요청후 요청처리후 다시 클라이언트로 돌아가 재요청하게 하여 ㅣist로 이동하게 함.
+		return "redirect:/redirect/list"
+				+ "";  //클라이언트가 요청후 요청처리후 다시 클라이언트로 돌아가 재요청하게 하여 ㅣist로 이동하게 함.
 	}
 	
 	@RequestMapping("/redirect/list")

@@ -2,12 +2,15 @@ package com.mycompany.myapp.dto;
 
 import java.util.Date;
 
-	public class Board {
+import org.springframework.web.multipart.MultipartFile;
+
+	public class Exam07Board {
 		private int bno;
 		private String btitle;
 		private String bcontent;
 		private String bwriter;
 		private Date bdate;
+	
 
 	public int getBno() {
 		return bno;
@@ -48,5 +51,5 @@ import java.util.Date;
 	public void setBdate(Date bdate) {
 		this.bdate = bdate;
 	}
-		
+	
 }
