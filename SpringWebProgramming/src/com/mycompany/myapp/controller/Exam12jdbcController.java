@@ -1,6 +1,7 @@
 package com.mycompany.myapp.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mycompany.myapp.dto.Exam12Board;
+import com.mycompany.myapp.dto.Exam12Member;
 import com.mycompany.myapp.service.Exam12Service;
 
 @Controller	
@@ -165,8 +167,22 @@ public class Exam12jdbcController {
 	}
 	
 	@RequestMapping(value="/jdbc/exam03", method=RequestMethod.POST)
-	 public String exam03InsertPost(){
+	 	public String exam03InsertPost() throws Exception{
 		
+		Exam12Member member = new Exam12Member();
+		member.setMoriginalfilename(member.getMattach().getOriginalFilename());
+		member.setMfilecontent(member.getMattach().getContentType());
+		String fileName = new Date().getTime()+"-"+member.getMoriginalfilename();
+		member.setMoriginalfilename(fileName);
+		
+		//첨부파일을 서버 로컬시스템에 저장
+		String realPath = servletContext.getRealPath("/WEB-INF/upload/");
+		File file = new File(realPath + fileName);
+		member.getMattach().transferTo(file);
+		//서비스 객체로 요청 처리
+		service.memberWrite(member);
+		
+		return "redirect:/jdbc/exam05";
 	}
 		
 }

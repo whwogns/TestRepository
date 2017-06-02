@@ -23,24 +23,24 @@ public class PCA9685 {
 	
 	private PCA9685GpioProvider gpioProvider; // gpio에서 제공하는 것으로 이용하면 됨
 	
-	private static final Pin PWM_00=PCA9685Pin.PWM_00;//쓰기쉽게 상수로 정의한것인것뿐
-	private static final Pin PWM_01=PCA9685Pin.PWM_01;
-	private static final Pin PWM_02=PCA9685Pin.PWM_02;
-	private static final Pin PWM_03=PCA9685Pin.PWM_03;
-	private static final Pin PWM_04=PCA9685Pin.PWM_04;
-	private static final Pin PWM_05=PCA9685Pin.PWM_05;
-	private static final Pin PWM_06=PCA9685Pin.PWM_06;
-	private static final Pin PWM_07=PCA9685Pin.PWM_07;
-	private static final Pin PWM_08=PCA9685Pin.PWM_08;
-	private static final Pin PWM_09=PCA9685Pin.PWM_09;
-	private static final Pin PWM_10=PCA9685Pin.PWM_10;
-	private static final Pin PWM_11=PCA9685Pin.PWM_11;
-	private static final Pin PWM_12=PCA9685Pin.PWM_12;
-	private static final Pin PWM_13=PCA9685Pin.PWM_13;
-	private static final Pin PWM_14=PCA9685Pin.PWM_14;
-	private static final Pin PWM_15=PCA9685Pin.PWM_15;
+	public static final Pin PWM_00=PCA9685Pin.PWM_00;//쓰기쉽게 상수로 정의한것인것뿐
+	public static final Pin PWM_01=PCA9685Pin.PWM_01;
+	public static final Pin PWM_02=PCA9685Pin.PWM_02;
+	public static final Pin PWM_03=PCA9685Pin.PWM_03;
+	public static final Pin PWM_04=PCA9685Pin.PWM_04;
+	public static final Pin PWM_05=PCA9685Pin.PWM_05;
+	public static final Pin PWM_06=PCA9685Pin.PWM_06;
+	public static final Pin PWM_07=PCA9685Pin.PWM_07;
+	public static final Pin PWM_08=PCA9685Pin.PWM_08;
+	public static final Pin PWM_09=PCA9685Pin.PWM_09;
+	public static final Pin PWM_10=PCA9685Pin.PWM_10;
+	public static final Pin PWM_11=PCA9685Pin.PWM_11;
+	public static final Pin PWM_12=PCA9685Pin.PWM_12;
+	public static final Pin PWM_13=PCA9685Pin.PWM_13;
+	public static final Pin PWM_14=PCA9685Pin.PWM_14;
+	public static final Pin PWM_15=PCA9685Pin.PWM_15;
 	
-	private int period;
+	public int period;
 	
 	//Constructor
 	private PCA9685() throws Exception{  //객체하나만만들어야하므로 싱글톤+쓴것임
