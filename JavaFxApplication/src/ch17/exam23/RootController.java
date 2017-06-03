@@ -1,4 +1,3 @@
-
 package ch17.exam23;
 
 import java.net.URL;
@@ -32,58 +31,51 @@ public class RootController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       ObservableList<String> data1 = FXCollections.observableArrayList();
-       data1.add("갤럭시s1");
-       data1.add("갤럭시s2");
-       data1.add("갤럭시s3");
-       data1.add("갤럭시s4");
-       data1.add("갤럭시s5");
-       data1.add("갤럭시s6");
-       
-       
-       listView.setItems(data1);
-       
-       
-         listView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>(){
-           @Override
-           public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-               tableView.getSelectionModel().select(newValue.intValue());
-               tableView.scrollTo(newValue.intValue());
-           }
-          
-          });
-         
-         
-         ///=========--=-=-=-=--=-=-===============================-=-==-=-==============================================
-       
+        ObservableList<String> data1 = FXCollections.observableArrayList();
+        data1.add("갤럭시s1");
+        data1.add("갤럭시s2");
+        data1.add("갤럭시s3");
+        data1.add("갤럭시s4");
+        data1.add("갤럭시s5");
+        data1.add("갤럭시s6");
+
+        listView.setItems(data1);
+
+        listView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                tableView.getSelectionModel().select(newValue.intValue());
+                tableView.scrollTo(newValue.intValue());
+            }
+
+        });
+
+        ///=========--=-=-=-=--=-=-===============================-=-==-=-==============================================
         TableColumn tc0 = tableView.getColumns().get(0);
         TableColumn tc1 = tableView.getColumns().get(1);
-       
+
         //컬럼 객체 생성
-        
         tc0.setCellValueFactory(new PropertyValueFactory<Phone, String>("name"));
         tc1.setCellValueFactory(new PropertyValueFactory<Phone, String>("image"));
-       
-        
+
         //phone 객체와 column을 연결시켜줌
         //각 컬럼에  폰객체에서의 각 필드값을 넣어줌.  <객체,필드타입>(필드)
-        
         ObservableList<Phone> list = FXCollections.observableArrayList();   //옵져버블리스트는 폰객체를 가진 컬렉션
-        list.add(new Phone("phone01.png","갤럭시s1","첫번째모델"));
-         list.add(new Phone("phone02.png","갤럭시s2","첫번째모델"));
-          list.add(new Phone("phone03.png","갤럭시s3","첫번째모델"));
-           list.add(new Phone("phone04.png","갤럭시s4","첫번째모델"));
-            list.add(new Phone("phone05.png","갤럭시s5","첫번째모델"));
-             list.add(new Phone("phone06.png","갤럭시s6","첫번째모델"));
-          tableView.setItems(list);   //테이블뷰에 데이터 세팅
-          
-          tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>(){
-           @Override
-           public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone newValue) {
-               imageView.setImage(new Image(getClass().getResource("images/"+newValue.getImage()).toString()));
-           }
-          
-          });
-    }    
-    
+        list.add(new Phone("phone01.png", "갤럭시s1", "첫번째모델"));
+        list.add(new Phone("phone02.png", "갤럭시s2", "첫번째모델"));
+        list.add(new Phone("phone03.png", "갤럭시s3", "첫번째모델"));
+        list.add(new Phone("phone04.png", "갤럭시s4", "첫번째모델"));
+        list.add(new Phone("phone05.png", "갤럭시s5", "첫번째모델"));
+        list.add(new Phone("phone06.png", "갤럭시s6", "첫번째모델"));
+        tableView.setItems(list);   //테이블뷰에 데이터 세팅
+
+        tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
+            @Override
+            public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone newValue) {
+                imageView.setImage(new Image(getClass().getResource("images/" + newValue.getImage()).toString()));
+            }
+
+        });
+    }
+
 }
