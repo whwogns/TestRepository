@@ -15,7 +15,7 @@
 			var v2 = "JavaScript is easy";
 			console.log(v2.indexOf("easy"));
 			
-			var v3="123456-1234567"
+			var v3="123456-1234567";
 			console.log(v3.substr(0,6));
 			console.log(v3.substr(7)); //시작인덱스만 넣으면 그로부터 끝까지 출력됨
 			console.log(v3.charAt(7));  // 7인덱스 글자 추출
