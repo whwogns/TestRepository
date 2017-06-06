@@ -1,0 +1,36 @@
+package com.kwangwoon.myapp.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.mycompany.myapp.service.Exam12Service;
+
+@Controller	
+public class WebController {
+	private static final Logger LOGGER=LoggerFactory.getLogger(WebController.class);
+	
+	@Autowired
+	private MemberService service;
+	
+	@RequestMapping("/")
+	public String login(){
+		LOGGER.info("요청");
+	return "/jdbc/login";
+	}
+	
+	@RequestMapping("/jdbc/join")
+	public String joinGET(){
+		return "jdbc/join";
+	}
+	
+	@RequestMapping(value="/jdbc/join", method=RequestMethod.POST)
+	public String joinPOST(){
+		return "redirect:/";
+		
+	}
+	
+}

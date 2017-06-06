@@ -1,0 +1,16 @@
+
+
+div{
+  background-color: yellow; border: 1px solid black;height: 100px;
+}
+
+.skyblue{
+  background-color: skyblue;
+}
+.btn{
+  border: 1px solid black;height: 70px; padding: 5px; 
+}
+.success{background-color: forestgreen; color:white;}
+.warning{background-color: red; color: white;}
+#goldDiv1{background-color: gold;}
+#goldDiv2{background-color: goldenrod;}

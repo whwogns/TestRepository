@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<!-- <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" /> -->
+			<PatternLayout pattern="%d{HH:mm:ss} %-5level %c{2}  %M() -%m%n" />
+			<!-- %d날짜 출력 형식, , %-5level(5글자가 되게 만들고, 로그의 레벨 출력), %logger{36}(logger를 출력해라->클래스명,패키지의 갯수(하위부터)), %msg(log의 메시지출력) -->
+		</Console>
+	</Appenders>
+	<Loggers>
+		<!--  <Logger name="com.mycompany.myapp" level="info">
+			<AppenderRef ref="Console"/>
+		</Logger>-->
+		<Root level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
