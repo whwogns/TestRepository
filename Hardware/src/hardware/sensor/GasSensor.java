@@ -56,7 +56,7 @@ public class GasSensor {
 		while(true){
 			double value = test.getValue();
 			System.out.println(value);
-			if(value>200){
+			if(value<100){
 				
 			}
 			Thread.sleep(1000);

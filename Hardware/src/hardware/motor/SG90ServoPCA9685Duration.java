@@ -48,7 +48,8 @@ public class SG90ServoPCA9685Duration {
 	
 	public static void main(String[] args) throws Exception{
 		PCA9685 pca9685 = PCA9685.getInstance();
-		SG90ServoPCA9685Duration servo = new SG90ServoPCA9685Duration(pca9685, PCA9685.PWM_15);
+		SG90ServoPCA9685Duration servo = new SG90ServoPCA9685Duration(pca9685, PCA9685.PWM_15);   
+		//PWM15 - 카메라상하 // PWM11 - 초음파좌우  // PWM14 - 카메라좌우 // PWM00 - 바퀴방향
 		
 //		for(int i=10; i<=180; i+=10){  
 //		servo.setAngle(i);
