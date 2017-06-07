@@ -1,0 +1,5 @@
+package com.kwangwoon.myapp.service;
+
+public class MemberServiceImpl {
+
+}

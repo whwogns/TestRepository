@@ -36,7 +36,7 @@ public class RootController implements Initializable {
     @Override      //책방식보다 이게 더 쉽고 유용할 수 있다.
 
     public void initialize(URL url, ResourceBundle rb){        
-            ObservableList<String> value = FXCollections.observableArrayList();
+        ObservableList<String> value = FXCollections.observableArrayList();
         value.add("공개");
         value.add("비공개");
        comboPublic.setItems(value);

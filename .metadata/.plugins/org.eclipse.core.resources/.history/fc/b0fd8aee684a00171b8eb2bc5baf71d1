@@ -1,0 +1,7 @@
+package com.kwangwoon.myapp.dao;
+
+import com.kwangwoon.myapp.dto.Member;
+
+public interface MemberDao {
+	public void memberInsert(Member member);
+}

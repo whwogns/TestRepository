@@ -1,0 +1,10 @@
+package com.kwangwoon.myapp.dao;
+
+public class MemberDaoImpl implements MemberDao{
+
+	@Override
+	public void memverJoin() {
+		
+	}
+
+}

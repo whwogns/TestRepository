@@ -1,0 +1,17 @@
+package com.kwangwoon.myapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.kwangwoon.myapp.dao.MemberDao;
+import com.kwangwoon.myapp.dto.Member;
+
+public class MemberServiceImpl implements MemberService{
+	
+	@Autowired MemberDao dao;
+
+	@Override
+	public void memberJoin(Member member){
+		
+	}
+
+}
