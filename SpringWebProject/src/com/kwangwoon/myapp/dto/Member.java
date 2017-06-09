@@ -10,8 +10,8 @@ public class Member {
 	private String mpassword;
 	private String mname;
 	//private Date mdate;
-	private int mtel;
-	private int mssn;
+	private String mtel;
+	private String mssn;
 	private String maddress;
 	private String moriginalfilename;
 	private String msavedfilename;
@@ -58,19 +58,19 @@ public class Member {
 //		this.mdate = mdate;
 //	}
 
-	public int getMtel() {
+	public String getMtel() {
 		return mtel;
 	}
 
-	public void setMtel(int mtel) {
+	public void setMtel(String mtel) {
 		this.mtel = mtel;
 	}
 
-	public int getMssn() {
+	public String getMssn() {
 		return mssn;
 	}
 
-	public void setMssn(int mssn) {
+	public void setMssn(String mssn) {
 		this.mssn = mssn;
 	}
 

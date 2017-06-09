@@ -51,14 +51,6 @@
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-lock"></span>
 					</span>
-					<textarea class="form-control" rows="5" cols="30"placeholder="회원가입날짜"name="mdate"></textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-lock"></span>
-					</span>
 					<textarea class="form-control" rows="5" cols="30"placeholder="전화번호"name="mtel"></textarea>
 				</div>
 			</div>
@@ -86,36 +78,13 @@
 					<textarea class="form-control" rows="5" cols="30"placeholder="회원주소"name="maddress"></textarea>
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-lock"></span>
-					</span>
-					<textarea class="form-control" rows="5" cols="30"placeholder="원래파일이름"name="moriginalfilename"></textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-lock"></span>
-					</span>
-					<textarea class="form-control" rows="5" cols="30"placeholder="저장파일이름"name="msavedfilename"></textarea>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-lock"></span>
-					</span>
-					<textarea class="form-control" rows="5" cols="30"placeholder="파일내용"name="mfilecontent"></textarea>
-				</div>
-			</div>
+			
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">
 						<span class="glyphicon glyphicon-camera"></span>
 					</span>
-					<input type="file" class="form-control" placeholder="선택" name="battach"/>
+					<input type="file" class="form-control" placeholder="선택" name="mattach"/>
 				</div>
 			</div>
 

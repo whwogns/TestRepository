@@ -36,11 +36,11 @@ public class MemberDaoImpl implements MemberDao{
 			pstmt.setString(1, member.getMid());
 			pstmt.setString(2, member.getMpassword());
 			pstmt.setString(3, member.getMname());
-			pstmt.setInt(4, member.getMtel());
-			pstmt.setInt(5, member.getMssn());
+			pstmt.setString(4, member.getMtel());
+			pstmt.setString(5, member.getMssn());
 			pstmt.setString(6, member.getMaddress());
 			pstmt.setString(7, member.getMoriginalfilename());
-			pstmt.setString(8, member.getMoriginalfilename());
+			pstmt.setString(7, member.getMsavedfilename());
 			pstmt.setString(9, member.getMfileContent());
 			pstmt.setString(10, member.getMemail());
 			

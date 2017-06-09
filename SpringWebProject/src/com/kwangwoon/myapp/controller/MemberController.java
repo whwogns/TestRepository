@@ -27,11 +27,12 @@ public class MemberController {
 	@Autowired
 	private ServletContext servletContext;
 	
-	@RequestMapping("/")    //로그인 페이지가 첫페이지
-	public String login(){
-		LOGGER.info("요청");
-	return "/jdbc/login";
-	}
+//	@RequestMapping("/")    //로그인 페이지가 첫페이지
+//	public String login(){
+//		LOGGER.info("요청");
+//	return "/jdbc/login";
+//	}
+	
 	
 	@RequestMapping(value="/jdbc/join", method=RequestMethod.GET)  //회원가입 버튼을 누르면 회원가입 창으로 이동 (get방식)
 	public String joinGET(){

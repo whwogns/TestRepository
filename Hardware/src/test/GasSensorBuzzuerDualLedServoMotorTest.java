@@ -1,9 +1,6 @@
 package test;
 
-import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
-import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
-import com.pi4j.io.gpio.event.GpioPinListenerDigital;
 import hardware.Converter.PCF8591;
 import hardware.buzzer.ActiveBuzzer;
 import hardware.led.DualColorLed;

@@ -4,4 +4,38 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+	<!-- Connection Pool (DataSource)설정 // datasource는 connection pool을 사용하는 
+		인터페이스 -->
+
+	<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+
+		<property name="driverClass" value="oracle.jdbc.OracleDriver" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+		<property name="user" value="iotuser" />
+		<property name="password" value="iot12345" />
+		<property name="maxPoolSize" value="1" />
+		<property name="initialPoolSize" value="1" />
+		<property name="acquireIncrement" value="1" />
+		<property name="minPoolSize" value="1" />
+
+	</bean>
+
+
+	<!-- jdbcTemplate 설정 (jdbc지원 api)// 이게 있어야 pstm을 굳이 안줘도 편하게 이용가능 중복코드가 줄어듬 
+		// 즉 완전히 dao가 완전 달라짐 -->
+	<bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- MyBatis 설정 -->
+	<!--
+	<bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="/WEB-INF/mybatis/*.xml"/>
+	</bean>
+	<bean name="sqlSessionTemplate"
+			class="org.mybatis.spring.SqlSessionTemplate">
+			<constructor-arg ref="sqlSessionFactory"/>
+			</bean>
+			-->
 </beans>

@@ -8,8 +8,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+import javax.swing.tree.RowMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.mycompany.myapp.dto.Exam12Board;
@@ -19,6 +23,8 @@ import com.mycompany.myapp.dto.Exam12Member;
 public class Exam12DaoImpl implements Exam12Dao {// 유지 보수 편하게 하려고
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Exam12DaoImpl.class);
+	
+	@Autowired private DataSource datasource;
 
 	@Override
 	// insert 가 되면은 bno 값을 리턴해준다.primary 키의 값을 리턴해준다.보통 primary 키값을 주고 게시물 처럼 자동
@@ -27,13 +33,18 @@ public class Exam12DaoImpl implements Exam12Dao {// 유지 보수 편하게 하�
 		int bno = -1;// 디비에 -1은 있을 수 없다.
 		Connection conn = null;
 		try {
-			// JDBC 드라이버 클래스 로딩
-			Class.forName("oracle.jdbc.OracleDriver");
-			// 연결 문자열 작성
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-			// 연결생성 연결객체 얻기
-
-			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
+//			// JDBC 드라이버 클래스 로딩
+//			Class.forName("oracle.jdbc.OracleDriver");
+//			// 연결 문자열 작성
+//			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+//			// 연결생성 연결객체 얻기
+//			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
+			
+			conn=datasource.getConnection();   //위의 연결코드를 이 코드로 대체가능해짐. 커넥션풀을 이용하므로
+			
+			
+			
+			
 			LOGGER.info("연결성공");
 			// SQL 작성
 			String sql = "insert into board ";
@@ -91,19 +102,18 @@ public class Exam12DaoImpl implements Exam12Dao {// 유지 보수 편하게 하�
 			// 그렇기 때문에 예외가 되든 아니든 처리될 수 있게 넣는다.
 			// conn.close();
 
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
+		}catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
 				LOGGER.info("연결 끊김");
-				conn.close();
+				conn.close();                                  /// 커넥션풀을 끊는게 아니라 반납하는 의미
 			} catch (SQLException e) {
 			}
 		}
 		return bno;
 	}
+
 
 	@Override
 	public List<Exam12Board> boardSelectAll() {
@@ -154,6 +164,8 @@ public class Exam12DaoImpl implements Exam12Dao {// 유지 보수 편하게 하�
 		}
 		return list;
 	}
+	
+	
 
 	@Override
 	public List<Exam12Board> boardSelectPage(int pageNo, int rowsPerPage) {

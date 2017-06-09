@@ -137,6 +137,7 @@
 			</div>
 		</div>
 		<a href="exam05" class="btn btn-success">목록</a> 
+		
 		<input onclick="handleBtnUpdate()" type="button" class="btn btn-warning"value="수정" /> 
 		<input onclick="handleBtnDelete()" type="button" class="btn btn-danger" value="삭제" />
 

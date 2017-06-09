@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 
 import org.slf4j.Logger;
@@ -24,7 +25,7 @@ import com.mycompany.myapp.service.Exam12Service;
 public class Exam12jdbcController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Exam12jdbcController.class);
 	
-	@Autowired
+	@Resource(name="exam12ServiceImpl2")
 	private Exam12Service service;
 	
 	@Autowired
@@ -161,19 +162,19 @@ public class Exam12jdbcController {
 	
 	
 	//=========================================================================
-	@RequestMapping("/jdbc/exam03")
-		public String exam03InsertGet(){
-		return "/jdbc/exam03";
+	@RequestMapping(value="/jdbc/exam03", method=RequestMethod.GET)
+	public String exam03InsertGet(){
+		return "jdbc/exam03";
 	}
 	
 	@RequestMapping(value="/jdbc/exam03", method=RequestMethod.POST)
-	 	public String exam03InsertPost() throws Exception{
+	public String exam03InsertPost(Exam12Member member) throws Exception{
+		LOGGER.info(member.getMattach().getOriginalFilename());
 		
-		Exam12Member member = new Exam12Member();
 		member.setMoriginalfilename(member.getMattach().getOriginalFilename());
 		member.setMfilecontent(member.getMattach().getContentType());
 		String fileName = new Date().getTime()+"-"+member.getMoriginalfilename();
-		member.setMoriginalfilename(fileName);
+		member.setMsavedfilename(fileName);
 		
 		//첨부파일을 서버 로컬시스템에 저장
 		String realPath = servletContext.getRealPath("/WEB-INF/upload/");
@@ -182,7 +183,7 @@ public class Exam12jdbcController {
 		//서비스 객체로 요청 처리
 		service.memberWrite(member);
 		
-		return "redirect:/jdbc/exam05";
+		return "redirect:/jdbc/exam06";
 	}
 		
 }
